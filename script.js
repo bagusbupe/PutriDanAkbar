@@ -138,6 +138,12 @@ function initInvitation() {
         invRoot.setAttribute("data-phase", "open");
       }
 
+      // Picu animasi muncul untuk seksi pembuka saat cover terangkat
+      setTimeout(() => {
+        const splashReveals = document.querySelectorAll('[data-band="splash"] [data-reveal]');
+        splashReveals.forEach((el) => el.setAttribute("data-seen", ""));
+      }, 350);
+
       // Putar musik latar
       playMusic();
     });
@@ -297,7 +303,32 @@ function initInvitation() {
     showToast("Ucapan terkirim!");
   }
 
-  // 6. Muat Firebase secara dinamis di latar belakang (tanpa memblokir halaman)
+  // 6. Scroll Reveal Observer (Animasi Scroll Mirip Aslinya)
+  const reveals = document.querySelectorAll("[data-reveal]");
+  if (reveals.length) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.setAttribute("data-seen", "");
+          if (entry.target.hasAttribute("data-story-row")) {
+            const dot = entry.target.querySelector("[data-story-dot]");
+            if (dot) dot.setAttribute("data-story-passed", "");
+          }
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: "0px 0px -8% 0px",
+      threshold: 0.05
+    });
+
+    reveals.forEach((el) => {
+      revealObserver.observe(el);
+    });
+  }
+
+  // 7. Muat Firebase secara dinamis di latar belakang (tanpa memblokir halaman)
   loadFirebaseRealtime();
 }
 
