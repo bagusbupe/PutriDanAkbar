@@ -80,7 +80,21 @@ function renderWishes(wishes) {
 }
 
 // ==================== INTI INISIALISASI HALAMAN ====================
+function updateCoverScale() {
+  const availH = window.innerHeight;
+  const availW = Math.min(window.innerWidth, 440);
+  const refH = 780;
+  const refW = 390;
+  const scale = Math.min(1, availH / refH, (availW < refW ? availW / refW : 1));
+  document.documentElement.style.setProperty('--cover-scale', scale.toFixed(4));
+}
+updateCoverScale();
+window.addEventListener('resize', updateCoverScale);
+window.addEventListener('orientationchange', updateCoverScale);
+
 function initInvitation() {
+  updateCoverScale();
+
   // 1. Parse Nama Tamu dari URL (?to=Nama+Tamu)
   const urlParams = new URLSearchParams(window.location.search);
   const guestParam = urlParams.get("to") || urlParams.get("u") || urlParams.get("guest");
