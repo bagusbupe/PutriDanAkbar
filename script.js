@@ -79,6 +79,43 @@ function renderWishes(wishes) {
   });
 }
 
+// Helper Ekstraksi Nama Tamu dari URL yang sangat tangguh
+function getGuestParamFromUrl() {
+  if (window.__invGuestName) return window.__invGuestName;
+  var href = window.location.href;
+  var query = "";
+  if (href.indexOf("?") !== -1) {
+    query = href.substring(href.indexOf("?") + 1);
+  } else if (href.indexOf("#") !== -1 && href.indexOf("#?") !== -1) {
+    query = href.substring(href.indexOf("#?") + 2);
+  }
+  if (!query) {
+    try {
+      var sp = new URLSearchParams(window.location.search);
+      var fallback = sp.get("to") || sp.get("u") || sp.get("guest") || sp.get("kpd") || sp.get("nama");
+      if (fallback) return fallback;
+    } catch (e) {}
+    return null;
+  }
+  if (query.indexOf("#") !== -1) query = query.split("#")[0];
+  var match = query.match(/(?:^|&)(?:to|u|guest|kpd|nama)=(.*?)(?:&(?:audio|autoplay|lang|ref|fbclid|utm_[^=]+)=|$)/i);
+  var raw = match ? match[1] : null;
+  if (!raw) {
+    try {
+      var sp = new URLSearchParams("?" + query);
+      raw = sp.get("to") || sp.get("u") || sp.get("guest") || sp.get("kpd") || sp.get("nama");
+    } catch (e) {}
+  }
+  if (!raw) return null;
+  var clean = raw;
+  try {
+    clean = decodeURIComponent(raw.replace(/\+/g, " "));
+  } catch (e) {
+    try { clean = decodeURI(raw.replace(/\+/g, " ")); } catch (e2) { clean = raw.replace(/\+/g, " "); }
+  }
+  return clean.replace(/\+/g, " ").trim();
+}
+
 // ==================== INTI INISIALISASI HALAMAN ====================
 function updateCoverScale() {
   const availH = window.innerHeight;
@@ -95,19 +132,19 @@ window.addEventListener('orientationchange', updateCoverScale);
 function initInvitation() {
   updateCoverScale();
 
-  // 1. Parse Nama Tamu dari URL (?to=Nama+Tamu)
-  const urlParams = new URLSearchParams(window.location.search);
-  const guestParam = urlParams.get("to") || urlParams.get("u") || urlParams.get("guest");
+  // 1. Parse Nama Tamu dari URL (?to=Nama+Tamu atau ?to=bagus+%26+budi)
+  const guestName = getGuestParamFromUrl();
   const guestNameElement = document.getElementById("guest-name");
 
-  if (guestParam && guestNameElement) {
-    let cleanName = guestParam;
-    try {
-      cleanName = decodeURIComponent(guestParam.replace(/\+/g, " "));
-    } catch {
-      cleanName = guestParam.replace(/\+/g, " ");
-    }
-    guestNameElement.textContent = cleanName;
+  if (guestName && guestNameElement) {
+    guestNameElement.textContent = guestName;
+    window.__invGuestName = guestName;
+  }
+
+  // Otomatis pre-fill nama tamu ke formulir RSVP
+  const rsvpNameInput = document.getElementById("rsvp-name");
+  if (guestName && rsvpNameInput && !rsvpNameInput.value) {
+    rsvpNameInput.value = guestName;
   }
 
   // 2. Gate / Cover Screen & Audio

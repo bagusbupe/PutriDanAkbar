@@ -503,6 +503,8 @@ button, input, select, textarea {
   font-weight: 700;
   font-size: 17px;
   color: var(--color-dark);
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .gate-btn-wrap {

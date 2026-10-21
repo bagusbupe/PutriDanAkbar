@@ -113,6 +113,34 @@
                 <span aria-hidden="true" class="wb-tape tape-yellow-sm"></span>
                 <p class="guest-to-title">Kepada Yth:</p>
                 <p id="guest-name" class="guest-name-text">Bapak/Ibu/Saudara/i</p>
+                <script>
+                  (function(){
+                    try {
+                      var h = window.location.href;
+                      var q = h.indexOf("?") !== -1 ? h.substring(h.indexOf("?") + 1) : "";
+                      if (!q && h.indexOf("#?") !== -1) q = h.substring(h.indexOf("#?") + 2);
+                      if (q.indexOf("#") !== -1) q = q.split("#")[0];
+                      var m = q.match(/(?:^|&)(?:to|u|guest|kpd|nama)=(.*?)(?:&(?:audio|autoplay|lang|ref|fbclid|utm_[^=]+)=|$)/i);
+                      var r = m ? m[1] : null;
+                      if (!r) {
+                        var sp = new URLSearchParams(window.location.search);
+                        r = sp.get("to") || sp.get("u") || sp.get("guest") || sp.get("kpd") || sp.get("nama");
+                      }
+                      if (r) {
+                        var c = r;
+                        try { c = decodeURIComponent(r.replace(/\+/g, " ")); } catch(e) {
+                          try { c = decodeURI(r.replace(/\+/g, " ")); } catch(e2) { c = r.replace(/\+/g, " "); }
+                        }
+                        c = c.replace(/\+/g, " ").trim();
+                        if (c) {
+                          window.__invGuestName = c;
+                          var el = document.getElementById("guest-name");
+                          if (el) el.textContent = c;
+                        }
+                      }
+                    } catch(err) {}
+                  })();
+                </script>
               </div>
 
               <!-- Open Invitation Button -->
@@ -479,7 +507,7 @@
         </section>
 
         <!-- SECTION 6: DRESS CODE -->
-        <section data-band="dressCode" class="inv-section bg-blue text-center">
+        <!-- <section data-band="dressCode" class="inv-section bg-blue text-center">
           <span data-scene="true" aria-hidden="true" class="band-scene">
             <span data-orn="piece" class="orn-dc-daisy"><span class="rot-dc-daisy"><img alt="" draggable="false" class="anim-bob-daisy" src="assets/images/daisy.webp"></span></span>
             <span data-orn="sway" class="orn-dc-ribbon"><span class="rot-dc-ribbon"><img alt="" draggable="false" class="anim-sway-ribbon" src="assets/images/ribbon.webp"></span></span>
@@ -516,7 +544,7 @@
               <span class="swatch-circle swatch-lilac"></span>
             </div>
           </div>
-        </section>
+        </section> -->
 
         <!-- SECTION 7: LIVE STREAM -->
         <section data-band="liveStream" class="inv-section bg-pink text-center">
@@ -1098,6 +1126,6 @@
   <!-- Toast Notification -->
   <div id="toast" class="toast-notification hidden"></div>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
