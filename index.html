@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>The Wedding Of Putri &amp; Akbar - Whimsy Bloom</title>
+
+  <!-- Google Fonts: Playpen Sans (Script), Quicksand (Body/Display), Roboto Mono (Numbers) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="gate-active">
+  <!-- Background Music Audio -->
+  <audio id="bg-audio" loop preload="none">
+    <source src="assets/audio/song.mp3" type="audio/mp3" />
+  </audio>
+
+  <!-- Main Phone / Shell Container -->
+  <div class="pv-screen">
+    <div class="inv-root inv-animate" lang="id" data-lang="id" data-template="whimsy-bloom" data-phase="shut" data-fs="mekar">
+
+      <!-- ==================== GATE / COVER SCREEN ==================== -->
+      <div id="gate-cover" class="inv-cover-box">
+        <div class="inv-cover-fit">
+          <section class="wb-gate">
+            
+            <!-- Floating Whimsical Ornaments -->
+            <span data-scene="true" aria-hidden="true" class="gate-scene">
+              <span data-orn="sway" class="orn-gate-ribbon">
+                <span class="rot-gate-ribbon">
+                  <img src="assets/images/ribbon.webp" alt="" draggable="false" class="anim-sway-ribbon" />
+                </span>
+              </span>
+
+              <span data-orn="hover" class="orn-gate-bee">
+                <span class="flip-gate-bee">
+                  <img src="assets/images/bee-trail.webp" alt="" draggable="false" class="anim-hover-bee" />
+                </span>
+              </span>
+
+              <span data-orn="piece" class="orn-gate-sparkle">
+                <span>
+                  <img src="assets/images/sparkle.webp" alt="" draggable="false" class="anim-twinkle-sparkle" />
+                </span>
+              </span>
+
+              <span data-orn="piece" class="orn-gate-confetti-1">
+                <span class="rot-confetti-1">
+                  <img src="assets/images/confetti.webp" alt="" draggable="false" class="anim-drift-confetti-1" />
+                </span>
+              </span>
+
+              <span data-orn="piece" class="orn-gate-confetti-2">
+                <span class="rot-confetti-2">
+                  <img src="assets/images/confetti.webp" alt="" draggable="false" class="anim-drift-confetti-2" />
+                </span>
+              </span>
+
+              <span data-orn="sway" class="orn-gate-flower">
+                <span class="rot-gate-flower">
+                  <img src="assets/images/flower.webp" alt="" draggable="false" class="anim-sway-flower" />
+                </span>
+              </span>
+
+              <span data-orn="sway" class="orn-gate-daisy">
+                <span class="rot-gate-daisy">
+                  <img src="assets/images/daisy.webp" alt="" draggable="false" class="anim-sway-daisy" />
+                </span>
+              </span>
+
+              <span data-orn="sway" class="orn-gate-meadow">
+                <span>
+                  <img src="assets/images/meadow.webp" alt="" draggable="false" class="anim-grass-meadow" />
+                </span>
+              </span>
+            </span>
+
+            <!-- Main Cover Card -->
+            <div class="gate-card-inner">
+              <p class="inv-gate gate-subtitle">The Wedding Of</p>
+
+              <!-- Arch Frame Foto Pasangan -->
+              <div class="inv-gate" data-step="1">
+                <div class="gate-arch-box">
+                  <div class="arch-photo-mask">
+                    <img src="assets/images/couple-3.webp" alt="Putri &amp; Akbar" class="gate-couple-img" />
+                  </div>
+                  <img src="assets/images/arch-2.webp" alt="" aria-hidden="true" draggable="false" class="arch-border-img" />
+                </div>
+              </div>
+
+              <!-- Names -->
+              <h2 class="inv-gate gate-heading" data-step="2">
+                <span class="block">
+                  <span class="gate-name-bride"><span data-name="bride">Putri</span></span>
+                  <span aria-hidden="true" class="gate-amp">&amp;</span>
+                  <span class="gate-name-groom"><span data-name="groom">Akbar</span></span>
+                </span>
+              </h2>
+
+              <!-- Date with Pastel Dots -->
+              <div class="inv-gate gate-date-row" data-step="3">
+                <span aria-hidden="true" class="dot-pink"></span>
+                <p class="gate-date-text">24 April 2027</p>
+                <span aria-hidden="true" class="dot-blue"></span>
+              </div>
+
+              <!-- Guest Card with Washi Tape -->
+              <div class="inv-gate guest-card-box" data-step="4">
+                <span aria-hidden="true" class="wb-tape tape-yellow-sm"></span>
+                <p class="guest-to-title">Kepada Yth:</p>
+                <p id="guest-name" class="guest-name-text">Bapak/Ibu/Saudara/i</p>
+              </div>
+
+              <!-- Open Invitation Button -->
+              <div class="inv-gate gate-btn-wrap" data-step="5">
+                <button id="btn-open" type="button" class="btn-buka-undangan">
+                  <span>Buka Undangan</span>
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- ==================== STICKY MUSIC BUTTON ==================== -->
+      <div class="inv-music">
+        <div class="music-btn-container">
+          <button id="music-btn" type="button" aria-label="Toggle Musik" aria-pressed="true" class="inv-music-btn">
+            <span class="eq-bars" aria-hidden="true">
+              <i class="inv-eq inv-eq-1"></i>
+              <i class="inv-eq inv-eq-2"></i>
+              <i class="inv-eq inv-eq-3"></i>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ==================== INVITATION BODY (MAIN CONTENT) ==================== -->
+      <div id="inv-body" tabindex="-1" class="inv-body">
+        
+        <!-- SECTION 1: SPLASH (HERO) -->
+        <section data-band="splash" class="inv-section bg-pink text-center">
+          <span data-scene="true" aria-hidden="true" class="band-scene">
+            <span data-orn="piece" class="orn-splash-flower"><span class="rot-splash-flower"><img alt="" draggable="false" class="anim-bob-flower" src="assets/images/flower.webp"></span></span>
+            <span data-orn="sway" class="orn-splash-branch"><span class="rot-splash-branch"><img alt="" draggable="false" class="anim-sway-branch" src="assets/images/branch.webp"></span></span>
+            <span data-orn="piece" class="orn-splash-confetti"><span class="rot-splash-confetti"><img alt="" draggable="false" class="anim-drift-confetti" src="assets/images/confetti.webp"></span></span>
+            <span data-orn="piece" class="orn-splash-sparkle"><span><img alt="" draggable="false" class="anim-twinkle-sparkle" src="assets/images/sparkle.webp"></span></span>
+            <span data-orn="sway" class="orn-splash-daisy"><span class="rot-splash-daisy"><img alt="" draggable="false" class="anim-sway-daisy" src="assets/images/daisy.webp"></span></span>
+            <span data-orn="sway" class="orn-splash-meadow"><span><img alt="" draggable="false" class="anim-grass-meadow" src="assets/images/meadow.webp"></span></span>
+            <span class="scene-gradient-pink"></span>
+          </span>
+
+          <div class="band-content">
+            <div data-reveal="true" class="wb-ohold splash-emblem-wrap">
+              <span aria-hidden="true" class="wb-o1 splash-bee-trail">
+                <img alt="" draggable="false" src="assets/images/bee-trail.webp" />
+              </span>
+              <span class="wb-o-emblem splash-emblem-img">
+                <img alt="" aria-hidden="true" draggable="false" src="assets/images/emblem.webp" />
+              </span>
+              <div class="splash-date-overlay">
+                <div class="wb-o3">
+                  <p class="splash-date-text">24 . 04 . 2027</p>
+                </div>
+              </div>
+            </div>
+
+            <h2 data-reveal="true" class="wb-ohold splash-heading">
+              <span class="block">
+                <span class="wb-n1 splash-name"><span data-name="bride">Putri</span></span>
+                <span aria-hidden="true" class="wb-n2 splash-amp">&amp;</span>
+                <span class="wb-n3 splash-name"><span data-name="groom">Akbar</span></span>
+              </span>
+            </h2>
+
+            <div data-reveal="true" class="wb-ohold splash-venue-wrap">
+              <p class="wb-o6 venue-title">The Grand Garden Ballroom</p>
+              <p class="wb-o7 venue-city">Jakarta Selatan</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 2: QUOTE -->
+        <section data-band="quote" class="inv-section bg-cream text-center">
+          <span data-scene="true" aria-hidden="true" class="band-scene">
+            <span data-orn="piece" class="orn-quote-daisy"><span class="rot-quote-daisy"><img alt="" draggable="false" class="anim-bob-daisy" src="assets/images/daisy.webp"></span></span>
+            <span data-orn="sway" class="orn-quote-branch"><span class="rot-quote-branch"><img alt="" draggable="false" class="anim-sway-branch" src="assets/images/branch.webp"></span></span>
+            <span data-orn="hover" class="orn-quote-bee"><span><img alt="" draggable="false" class="anim-hover-bee" src="assets/images/bee.webp"></span></span>
+            <span data-orn="piece" class="orn-quote-confetti"><span class="rot-quote-confetti"><img alt="" draggable="false" class="anim-drift-confetti" src="assets/images/confetti.webp"></span></span>
+            <span data-orn="sway" class="orn-quote-flower"><span class="rot-quote-flower"><img alt="" draggable="false" class="anim-sway-flower" src="assets/images/flower.webp"></span></span>
+            <span data-orn="piece" class="orn-quote-sparkle"><span><img alt="" draggable="false" class="anim-twinkle-sparkle" src="assets/images/sparkle.webp"></span></span>
+            <span class="scene-gradient-cream"></span>
+          </span>
+
+          <!-- Lace Seam Border -->
+          <span aria-hidden="true" data-seam="true" class="band-seam-lace lace-pos-37"></span>
+
+          <div class="band-content">
+            <div data-reveal="true" class="wb-verse quote-card">
+              <span aria-hidden="true" class="wb-tape tape-pink-lg"></span>
+              <img alt="" aria-hidden="true" draggable="false" class="quote-hearts-icon" src="assets/images/hearts.webp" />
+              <p class="quote-verse-text">
+                "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan dari jenismu sendiri, agar kamu merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang."
+              </p>
+              <p class="quote-source-text">QS. Ar-Rum: 21</p>
+            </div>
+
+            <!-- Polaroid Print & Memories Ornament -->
+            <div class="quote-polaroid-row">
+              <div data-reveal="left" class="wb-object quote-memories-box">
+                <img alt="" aria-hidden="true" draggable="false" src="assets/images/memories.webp" />
+              </div>
+              <div data-reveal="right" class="wb-print quote-polaroid-box">
+                <div class="polaroid-outer">
+                  <div class="polaroid-card rot-4">
+                    <div class="polaroid-frame-4-5">
+                      <img alt="" class="polaroid-img-center" src="assets/images/couple-3.webp" />
+                    </div>
+                    <span class="wb-peel polaroid-hearts-sticker">
+                      <img alt="" draggable="false" class="drop-shadow-peel" src="assets/images/hearts.webp" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 3: COUPLE -->
+        <section id="couple" data-band="couple" class="inv-section bg-blue text-center pb-120">
+          <span data-scene="true" aria-hidden="true" class="band-scene">
+            <span data-orn="piece" class="orn-couple-hearts"><span class="rot-couple-hearts"><img alt="" draggable="false" class="anim-bob-hearts" src="assets/images/hearts.webp"></span></span>
+            <span data-orn="sway" class="orn-couple-branch"><span class="rot-couple-branch"><img alt="" draggable="false" class="anim-sway-branch" src="assets/images/branch.webp"></span></span>
+            <span data-orn="sway" class="orn-couple-daisy-top"><span class="rot-couple-daisy-top"><img alt="" draggable="false" class="anim-sway-daisy" src="assets/images/daisy.webp"></span></span>
+            <span data-orn="sway" class="orn-couple-flower-mid"><span class="rot-couple-flower-mid"><img alt="" draggable="false" class="anim-sway-flower" src="assets/images/flower.webp"></span></span>
+            <span data-orn="piece" class="orn-couple-confetti"><span class="rot-couple-confetti"><img alt="" draggable="false" class="anim-drift-confetti" src="assets/images/confetti.webp"></span></span>
+            <span data-orn="hover" class="orn-couple-bee"><span class="flip-couple-bee"><img alt="" draggable="false" class="anim-hover-bee" src="assets/images/bee.webp"></span></span>
+            <span data-orn="piece" class="orn-couple-sparkle"><span><img alt="" draggable="false" class="anim-twinkle-sparkle" src="assets/images/sparkle.webp"></span></span>
+            <span data-orn="sway" class="orn-couple-meadow"><span><img alt="" draggable="false" class="anim-grass-meadow" src="assets/images/meadow.webp"></span></span>
+            <span class="scene-gradient-blue"></span>
+          </span>
+
+          <span aria-hidden="true" data-seam="true" class="band-seam-lace lace-pos-0"></span>
+
+          <div class="band-content">
+            <div data-reveal="true" class="wb-head pt-62">
+              <span aria-hidden="true" class="wb-beeway bee-trail-right">
+                <img alt="" draggable="false" src="assets/images/bee-trail.webp" />
+              </span>
+              <h2 class="wb-write section-main-title">Mempelai Berbahagia</h2>
+              <span class="wb-wave wave-separator">
+                <img alt="" aria-hidden="true" draggable="false" src="assets/images/wave.webp" />
+              </span>
+            </div>
+
+            <div data-reveal="true" class="text-center">
+              <p class="section-intro-text">
+                Dengan memohon rahmat Tuhan Yang Maha Esa, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberi restu pada hari bahagia kami.
+              </p>
+            </div>
+
+            <!-- Mempelai Wanita -->
+            <div class="mt-48">
+              <div data-reveal="left" class="wb-print">
+                <div class="polaroid-wrapper-250">
+                  <div class="polaroid-card-pink rot-neg-3">
+                    <div class="polaroid-frame-4-5">
+                      <img alt="Putri" class="polaroid-img-top-36" src="assets/images/couple-2.webp" />
+                    </div>
+                    <span class="wb-peel bow-center-peel">
+                      <span class="wb-bow">
+                        <img alt="" draggable="false" class="drop-shadow-bow" src="assets/images/bow.webp" />
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div data-reveal="true">
+                <div class="profile-info-wrap">
+                  <p class="profile-name-script">Putri Lestari, S.Kom.</p>
+                  <p class="profile-parents-text">Putri pertama dari<br />Bapak Hartono &amp; Ibu Sri Rahayu</p>
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="instagram-button">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>
+                    <span>@putrilestari</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Divider & -->
+            <div class="mt-30">
+              <div data-reveal="true" class="wb-amp couple-ampersand-divider">
+                <span class="couple-amp-text">&amp;</span>
+              </div>
+
+              <!-- Mempelai Pria -->
+              <div data-reveal="right" class="wb-print">
+                <div class="polaroid-wrapper-250">
+                  <div class="polaroid-card-blue rot-3">
+                    <div class="polaroid-frame-4-5">
+                      <img alt="Akbar" class="polaroid-img-top-35" src="assets/images/couple-1.webp" />
+                    </div>
+                    <span aria-hidden="true" class="wb-tape tape-pink-lg tape-rot-neg-4"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div data-reveal="true">
+                <div class="profile-info-wrap">
+                  <p class="profile-name-script">Akbar Pratama, S.T.</p>
+                  <p class="profile-parents-text">Putra kedua dari<br />Bapak Bambang Wijaya &amp; Ibu Nurjanah</p>
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="instagram-button">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>
+                    <span>@akbarpratama</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 4: COUNTDOWN -->
+        <section id="countdown-sec" data-band="countdown" class="inv-section bg-pink text-center">
+          <span data-scene="true" aria-hidden="true" class="band-scene">
+            <span data-orn="piece" class="orn-cd-sparkle"><span class="rot-cd-sparkle"><img alt="" draggable="false" class="anim-bob-sparkle" src="assets/images/sparkle.webp"></span></span>
+            <span data-orn="sway" class="orn-cd-ribbon"><span class="rot-cd-ribbon"><img alt="" draggable="false" class="anim-sway-ribbon" src="assets/images/ribbon.webp"></span></span>
+            <span data-orn="piece" class="orn-cd-confetti"><span class="rot-cd-confetti"><img alt="" draggable="false" class="anim-drift-confetti" src="assets/images/confetti.webp"></span></span>
+            <span data-orn="sway" class="orn-cd-flower"><span class="rot-cd-flower"><img alt="" draggable="false" class="anim-sway-flower" src="assets/images/flower.webp"></span></span>
+            <span data-orn="sway" class="orn-cd-branch"><span class="rot-cd-branch"><img alt="" draggable="false" class="anim-sway-branch" src="assets/images/branch.webp"></span></span>
+            <span data-orn="hover" class="orn-cd-bee"><span><img alt="" draggable="false" class="anim-hover-bee" src="assets/images/bee.webp"></span></span>
+            <span class="scene-gradient-pink"></span>
+          </span>
+
+          <span aria-hidden="true" data-seam="true" class="band-seam-lace lace-pos-37"></span>
+
+          <div class="band-content">
+            <div data-reveal="true" class="wb-head">
+              <span aria-hidden="true" class="wb-beeway bee-trail-left-flip">
+                <img alt="" draggable="false" src="assets/images/bee-trail.webp" />
+              </span>
+              <span class="wb-grow cd-clock-icon">
+                <img alt="" aria-hidden="true" draggable="false" src="assets/images/clock.webp" />
+              </span>
+              <p class="cd-pretitle">SIMPAN TANGGALNYA</p>
+              <h2 class="wb-write section-main-title">Menuju Hari Bahagia</h2>
+              <span class="wb-wave wave-separator">
+                <img alt="" aria-hidden="true" draggable="false" src="assets/images/wave.webp" />
+              </span>
+            </div>
+
+            <!-- Square Photo Card with Tape -->
+            <div data-reveal="true" class="wb-print mt-34">
+              <div class="polaroid-wrapper-236">
+                <div class="polaroid-card-yellow rot-neg-3">
+                  <div class="polaroid-frame-1-1">
+                    <img alt="" class="polaroid-img-center" src="assets/images/couple-3.webp" />
+                  </div>
+                  <span aria-hidden="true" class="wb-tape tape-yellow-lg tape-rot-neg-4"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4-Blob Countdown Grid -->
+            <div class="cd-grid-wrap">
+              <span aria-hidden="true" class="wb-peel cd-excl-sticker">
+                <img alt="" draggable="false" src="assets/images/excl.webp" />
+              </span>
+              <div class="cd-blob-grid">
+                <div data-reveal="true" class="wb-cell blob-cell">
+                  <span id="cd-days" class="blob-pink">00</span>
+                  <span class="blob-label">Hari</span>
+                </div>
+                <div data-reveal="true" class="wb-cell blob-cell">
+                  <span id="cd-hours" class="blob-blue">00</span>
+                  <span class="blob-label">Jam</span>
+                </div>
+                <div data-reveal="true" class="wb-cell blob-cell">
+                  <span id="cd-mins" class="blob-yellow">00</span>
+                  <span class="blob-label">Menit</span>
+                </div>
+                <div data-reveal="true" class="wb-cell blob-cell">
+                  <span id="cd-secs" class="blob-lilac">00</span>
+                  <span class="blob-label">Detik</span>
+                </div>
+              </div>
+            </div>
+
+            <div data-reveal="true">
+              <p class="cd-honored-text">
+                Merupakan kehormatan bagi kami apabila Bapak/Ibu berkenan hadir.
+              </p>
+            </div>
+
+            <div data-reveal="true" class="mt-18">
+              <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=The+Wedding+Of+Putri+%26+Akbar&amp;dates=20270424T010000Z%2F20270424T070000Z&amp;location=The+Grand+Garden+Ballroom%2C+Jakarta" target="_blank" rel="noopener noreferrer" class="btn-outline-pill">
+                <span>Simpan ke Kalender</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 5: EVENTS -->
+        <section id="event" data-band="events" class="inv-section bg-cream">
+          <span data-scene="true" aria-hidden="true" class="band-scene">
+            <span data-orn="piece" class="orn-ev-flower"><span class="rot-ev-flower"><img alt="" draggable="false" class="anim-bob-flower" src="assets/images/flower.webp"></span></span>
+            <span data-orn="sway" class="orn-ev-branch"><span class="rot-ev-branch"><img alt="" draggable="false" class="anim-sway-branch" src="assets/images/branch.webp"></span></span>
+            <span data-orn="sway" class="orn-ev-daisy"><span class="rot-ev-daisy"><img alt="" draggable="false" class="anim-sway-daisy" src="assets/images/daisy.webp"></span></span>
+            <span data-orn="piece" class="orn-ev-confetti"><span class="rot-ev-confetti"><img alt="" draggable="false" class="anim-drift-confetti" src="assets/images/confetti.webp"></span></span>
+            <span data-orn="sway" class="orn-ev-flower-bottom"><span class="rot-ev-flower-bottom"><img alt="" draggable="false" class="anim-sway-flower" src="assets/images/flower.webp"></span></span>
+            <span data-orn="piece" class="orn-ev-sparkle"><span><img alt="" draggable="false" class="anim-twinkle-sparkle" src="assets/images/sparkle.webp"></span></span>
+            <span class="scene-gradient-cream"></span>
+          </span>
+
+          <span aria-hidden="true" data-seam="true" class="band-seam-lace lace-pos-0"></span>
+
+          <div class="band-content">
+            <div data-reveal="true" class="wb-head">
+              <span aria-hidden="true" class="wb-beeway bee-trail-right">
+                <img alt="" draggable="false" src="assets/images/bee-trail.webp" />
+              </span>
+              <span class="wb-grow ev-heading-icon">
+                <img alt="" aria-hidden="true" draggable="false" src="assets/images/weddingday.webp" />
+              </span>
+              <h2 class="wb-write section-main-title">Rangkaian Acara</h2>
+              <span class="wb-wave wave-separator">
+                <img alt="" aria-hidden="true" draggable="false" src="assets/images/wave.webp" />
+              </span>
+            </div>
+
+            <div class="events-card-column">
+              <!-- Akad Nikah Card -->
+              <div data-reveal="left" class="wb-card rot-neg-1-2">
+                <div class="event-card-inner">
+                  <span aria-hidden="true" class="wb-tape tape-blue-lg tape-rot-neg-3"></span>
+                  <span aria-hidden="true" class="wb-peel event-flower-peel">
+                    <img alt="" draggable="false" src="assets/images/flower.webp" />
+                  </span>
+                  <p class="event-date-pill">Sabtu, 24 April 2027</p>
+                  <p class="event-name-script">Akad Nikah</p>
+                  <p class="event-time-text">08.00 – 10.00 WIB</p>
+                  <span aria-hidden="true" class="event-divider-line bar-pink"></span>
+                  <p class="event-venue-bold">Masjid Agung Al-Ikhlas</p>
+                  <p class="event-venue-address">Jl. Raden Fatah No. 1, Selong, Kebayoran Baru, Jakarta Selatan</p>
+                  <div class="mt-16">
+                    <a href="https://maps.google.com/?q=Masjid+Agung+Al-Ikhlas+Jakarta" target="_blank" rel="noopener noreferrer" class="btn-primary-pill">
+                      <span>Lihat Lokasi</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Resepsi Card -->
+              <div data-reveal="right" class="wb-card rot-1-2">
+                <div class="event-card-inner">
+                  <span aria-hidden="true" class="wb-tape tape-pink-lg tape-rot-3"></span>
+                  <span aria-hidden="true" class="wb-peel event-daisy-peel">
+                    <img alt="" draggable="false" src="assets/images/daisy.webp" />
+                  </span>
+                  <p class="event-date-pill">Sabtu, 24 April 2027</p>
+                  <p class="event-name-script">Resepsi</p>
+                  <p class="event-time-text">11.00 – 14.00 WIB</p>
+                  <span aria-hidden="true" class="event-divider-line bar-blue"></span>
+                  <p class="event-venue-bold">The Grand Garden Ballroom</p>
+                  <p class="event-venue-address">Hotel Mulia Resort &amp; Convention, Senayan, Jakarta Pusat</p>
+                  <div class="mt-16">
+                    <a href="https://maps.google.com/?q=Hotel+Mulia+Senayan+Jakarta" target="_blank" rel="noopener noreferrer" class="btn-primary-pill">
+                      <span>Lihat Lokasi</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 6: DRESS CODE -->
+        <section data-band="dressCode" class="inv-section bg-blue text-center">
+          <span data-scene="true" aria-hidden="true" class="band-scene">
+            <span data-orn="piece" class="orn-dc-daisy"><span class="rot-dc-daisy"><img alt="" draggable="false" class="anim-bob-daisy" src="assets/images/daisy.webp"></span></span>
+            <span data-orn="sway" class="orn-dc-ribbon"><span class="rot-dc-ribbon"><img alt="" draggable="false" class="anim-sway-ribbon" src="assets/images/ribbon.webp"></span></span>
+            <span data-orn="piece" class="orn-dc-confetti"><span class="rot-dc-confetti"><img alt="" draggable="false" class="anim-drift-confetti" src="assets/images/confetti.webp"></span></span>
+            <span data-orn="hover" class="orn-dc-bee"><span class="flip-dc-bee"><img alt="" draggable="false" class="anim-hover-bee" src="assets/images/bee.webp"></span></span>
+            <span data-orn="sway" class="orn-dc-daisy-mid"><span class="rot-dc-daisy-mid"><img alt="" draggable="false" class="anim-sway-daisy" src="assets/images/daisy.webp"></span></span>
+            <span data-orn="piece" class="orn-dc-sparkle"><span><img alt="" draggable="false" class="anim-twinkle-sparkle" src="assets/images/sparkle.webp"></span></span>
+            <span class="scene-gradient-blue"></span>
+          </span>
+
+          <span aria-hidden="true" data-seam="true" class="band-seam-lace lace-pos-37"></span>
+
+          <div class="band-content">
+            <div data-reveal="true" class="wb-head pt-62">
+              <span aria-hidden="true" class="wb-beeway bee-trail-left-flip">
+                <img alt="" draggable="false" src="assets/images/bee-trail.webp" />
+              </span>
+              <h2 class="wb-write section-main-title">Busana Acara</h2>
+              <span class="wb-wave wave-separator">
+                <img alt="" aria-hidden="true" draggable="false" src="assets/images/wave.webp" />
+              </span>
+            </div>
+
+            <div data-reveal="true" class="text-center">
+              <p class="section-intro-text">
+                Kami akan senang bila Bapak/Ibu berkenan mengenakan busana bernuansa pastel: merah muda, biru muda, kuning lembut, atau lila.
+              </p>
+            </div>
+
+            <div data-reveal="true" class="wb-swatches dresscode-swatch-box">
+              <span class="swatch-circle swatch-pink"></span>
+              <span class="swatch-circle swatch-blue"></span>
+              <span class="swatch-circle swatch-yellow"></span>
+              <span class="swatch-circle swatch-lilac"></span>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 7: LIVE STREAM -->
+        <section data-band="liveStream" class="inv-section bg-pink text-center">
+          <span data-scene="true" aria-hidden="true" class="band-scene">
+            <span data-orn="piece" class="orn-ls-hearts"><span class="rot-ls-hearts"><img alt="" draggable="false" class="anim-bob-hearts" src="assets/images/hearts.webp"></span></span>
+            <span data-orn="sway" class="orn-ls-branch"><span class="rot-ls-branch"><img alt="" draggable="false" class="anim-sway-branch" src="assets/images/branch.webp"></span></span>
+            <span data-orn="sway" class="orn-ls-flower"><span class="rot-ls-flower"><img alt="" draggable="false" class="anim-sway-flower" src="assets/images/flower.webp"></span></span>
+            <span data-orn="piece" class="orn-ls-confetti"><span class="rot-ls-confetti"><img alt="" draggable="false" class="anim-drift-confetti" src="assets/images/confetti.webp"></span></span>
+            <span data-orn="piece" class="orn-ls-sparkle"><span><img alt="" draggable="false" class="anim-twinkle-sparkle" src="assets/images/sparkle.webp"></span></span>
+            <span data-orn="hover" class="orn-ls-bee"><span><img alt="" draggable="false" class="anim-hover-bee" src="assets/images/bee.webp"></span></span>
+            <span class="scene-gradient-pink"></span>
+          </span>
+
+          <span aria-hidden="true" data-seam="true" class="band-seam-lace lace-pos-0"></span>
+
+          <div class="band-content">
+            <div data-reveal="true" class="wb-head">
+              <span aria-hidden="true" class="wb-beeway bee-trail-right">
+                <img alt="" draggable="false" src="assets/images/bee-trail.webp" />
+              </span>
+              <span class="wb-grow ls-heading-icon">
+                <img alt="" aria-hidden="true" draggable="false" src="assets/images/phone.webp" />
+              </span>
+              <h2 class="wb-write section-main-title">Siaran Langsung</h2>
+              <span class="wb-wave wave-separator">
+                <img alt="" aria-hidden="true" draggable="false" src="assets/images/wave.webp" />
+              </span>
+            </div>
+
+            <div data-reveal="true">
+              <p class="stream-note-text">
+                Akad nikah disiarkan langsung Sabtu, 24 April 2027 mulai 08.00 WIB.
+              </p>
+            </div>
+
+            <div data-reveal="true" class="wb-screen stream-screen-wrap">
+              <div class="stream-card-box">
+                <span aria-hidden="true" class="wb-tape tape-blue-sm tape-rot-neg-10"></span>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="stream-video-link">
+                  <div class="stream-thumbnail-frame">
+                    <img alt="Siaran" class="stream-cover-img" src="assets/images/couple-4.webp" />
+                  </div>
+                  <span aria-hidden="true" class="stream-dark-scrim"></span>
+                  <span aria-hidden="true" class="stream-play-circle">
+                    <span class="stream-play-triangle"></span>
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            <div data-reveal="true">
+              <p class="stream-hashtag-text">#PutriAkbarBersemi</p>
+            </div>
+
+            <div data-reveal="true" class="mt-14">
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn-primary-pill">
+                <span>Tonton Siaran</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 8: GALLERY -->
+        <section id="gallery" data-band="gallery" class="inv-section bg-cream gallery-pad">
+          <span data-scene="true" aria-hidden="true" class="band-scene">
+            <span data-orn="piece" class="orn-gal-sparkle"><span class="rot-gal-sparkle"><img alt="" draggable="false" class="anim-bob-sparkle" src="assets/images/sparkle.webp"></span></span>
+            <span data-orn="sway" class="orn-gal-branch"><span class="rot-gal-branch"><img alt="" draggable="false" class="anim-sway-branch" src="assets/images/branch.webp"></span></span>
+            <span data-orn="piece" class="orn-gal-confetti"><span class="rot-gal-confetti"><img alt="" draggable="false" class="anim-drift-confetti" src="assets/images/confetti.webp"></span></span>
+            <span data-orn="sway" class="orn-gal-daisy"><span class="rot-gal-daisy"><img alt="" draggable="false" class="anim-sway-daisy" src="assets/images/daisy.webp"></span></span>
+            <span data-orn="hover" class="orn-gal-bee"><span class="flip-gal-bee"><img alt="" draggable="false" class="anim-hover-bee" src="assets/images/bee.webp"></span></span>
+            <span data-orn="sway" class="orn-gal-flower"><span class="rot-gal-flower"><img alt="" draggable="false" class="anim-sway-flower" src="assets/images/flower.webp"></span></span>
+            <span class="scene-gradient-cream"></span>
+          </span>
+
+          <span aria-hidden="true" data-seam="true" class="band-seam-lace lace-pos-37"></span>
+
+          <div class="band-content">
+            <div data-reveal="true" class="wb-head">
+              <span aria-hidden="true" class="wb-beeway bee-trail-left-flip">
+                <img alt="" draggable="false" src="assets/images/bee-trail.webp" />
+              </span>
+              <span class="wb-grow gal-camera-icon">
+                <img alt="" aria-hidden="true" draggable="false" src="assets/images/camera.webp" />
+              </span>
+              <h2 class="wb-write section-main-title">Momen Terbaik</h2>
+              <span class="wb-wave wave-separator">
+                <img alt="" aria-hidden="true" draggable="false" src="assets/images/wave.webp" />
+              </span>
+            </div>
+
+            <div data-reveal="true" class="text-center">
+              <p class="section-intro-text">Kenangan kecil yang kami simpan</p>
+            </div>
+
+            <!-- Collage Frame with Overlay Frame -->
+            <div data-reveal="true" class="wb-album collage-album-wrap">
+              <button type="button" class="gallery-zoom-btn collage-btn-1" data-full="assets/images/couple-1.webp" aria-label="Foto 1">
+                <div class="collage-crop-box">
+                  <img alt="" class="collage-img" src="assets/images/couple-1.webp" />
+                </div>
+              </button>
+              <button type="button" class="gallery-zoom-btn collage-btn-2" data-full="assets/images/couple-2.webp" aria-label="Foto 2">
+                <div class="collage-crop-box">
+                  <img alt="" class="collage-img" src="assets/images/couple-2.webp" />
+                </div>
+              </button>
+              <img alt="" aria-hidden="true" draggable="false" class="collage-frame-overlay" src="assets/images/collage.webp" />
+              <span aria-hidden="true" class="wb-peel collage-bow-peel">
+                <img alt="" draggable="false" class="drop-shadow-bow" src="assets/images/bow.webp" />
+              </span>
+              <span aria-hidden="true" class="wb-peel collage-flower-peel">
+                <img alt="" draggable="false" class="drop-shadow-peel" src="assets/images/flower.webp" />
+              </span>
+            </div>
+
+            <!-- Staggered Pair 1: Photos 3 & 4 -->
+            <div class="gal-staggered-row">
+              <img alt="" aria-hidden="true" draggable="false" class="gal-row-hearts" src="assets/images/hearts.webp" />
+              <div data-reveal="left" class="wb-print gal-col-left">
+                <button type="button" class="gallery-zoom-btn w-full block-btn" data-full="assets/images/couple-3.webp" aria-label="Foto 3">
+                  <div class="polaroid-outer">
+                    <div class="polaroid-card-pink rot-neg-4">
+                      <div class="polaroid-frame-4-5">
+                        <img alt="" class="polaroid-img-center" src="assets/images/couple-3.webp" />
+                      </div>
+                      <span aria-hidden="true" class="wb-tape tape-blue-lg tape-rot-neg-4"></span>
+                    </div>
+                  </div>
+                </button>
+              </div>
+              <div data-reveal="right" class="wb-print gal-col-right">
+                <button type="button" class="gallery-zoom-btn w-full block-btn" data-full="assets/images/couple-4.webp" aria-label="Foto 4">
+                  <div class="polaroid-outer">
+                    <div class="polaroid-card-blue rot-5">
+                      <div class="polaroid-frame-1-1">
+                        <img alt="" class="polaroid-img-center" src="assets/images/couple-4.webp" />
+                      </div>
+                      <span class="wb-peel polaroid-hearts-sticker">
+                        <img alt="" draggable="false" class="drop-shadow-peel" src="assets/images/hearts.webp" />
+                      </span>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <!-- Staggered Pair 2: Photos 5 & 6 -->
+            <div class="gal-staggered-row-reverse">
+              <img alt="" aria-hidden="true" draggable="false" class="gal-row-sparkle" src="assets/images/sparkle.webp" />
+              <div data-reveal="right" class="wb-print gal-col-left">
+                <button type="button" class="gallery-zoom-btn w-full block-btn" data-full="assets/images/couple-5.webp" aria-label="Foto 5">
+                  <div class="polaroid-outer">
+                    <div class="polaroid-card-yellow rot-4">
+                      <div class="polaroid-frame-4-5">
+                        <img alt="" class="polaroid-img-center" src="assets/images/couple-5.webp" />
+                      </div>
+                      <span class="wb-peel bow-center-peel">
+                        <span class="wb-bow">
+                          <img alt="" draggable="false" class="drop-shadow-bow" src="assets/images/bow.webp" />
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </button>
+              </div>
+              <div data-reveal="left" class="wb-print gal-col-right">
+                <button type="button" class="gallery-zoom-btn w-full block-btn" data-full="assets/images/couple-6.webp" aria-label="Foto 6">
+                  <div class="polaroid-outer">
+                    <div class="polaroid-card-lilac rot-neg-5">
+                      <div class="polaroid-frame-1-1">
+                        <img alt="" class="polaroid-img-center" src="assets/images/couple-6.webp" />
+                      </div>
+                      <span class="wb-peel polaroid-daisy-sticker">
+                        <img alt="" draggable="false" class="drop-shadow-peel" src="assets/images/daisy.webp" />
+                      </span>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 9: LOVE STORY -->
+        <section data-band="story" class="inv-section bg-blue">
+          <span data-scene="true" aria-hidden="true" class="band-scene">
+            <span data-orn="piece" class="orn-st-flower"><span class="rot-st-flower"><img alt="" draggable="false" class="anim-bob-flower" src="assets/images/flower.webp"></span></span>
+            <span data-orn="sway" class="orn-st-branch"><span class="rot-st-branch"><img alt="" draggable="false" class="anim-sway-branch" src="assets/images/branch.webp"></span></span>
+            <span data-orn="piece" class="orn-st-confetti"><span class="rot-st-confetti"><img alt="" draggable="false" class="anim-drift-confetti" src="assets/images/confetti.webp"></span></span>
+            <span data-orn="piece" class="orn-st-sparkle"><span><img alt="" draggable="false" class="anim-twinkle-sparkle" src="assets/images/sparkle.webp"></span></span>
+            <span data-orn="sway" class="orn-st-daisy"><span class="rot-st-daisy"><img alt="" draggable="false" class="anim-sway-daisy" src="assets/images/daisy.webp"></span></span>
+            <span data-orn="sway" class="orn-st-flower-bot"><span class="rot-st-flower-bot"><img alt="" draggable="false" class="anim-sway-flower" src="assets/images/flower.webp"></span></span>
+            <span class="scene-gradient-blue"></span>
+          </span>
+
+          <span aria-hidden="true" data-seam="true" class="band-seam-lace lace-pos-0"></span>
+
+          <div class="band-content">
+            <div data-reveal="true" class="wb-head">
+              <span aria-hidden="true" class="wb-beeway bee-trail-right">
+                <img alt="" draggable="false" src="assets/images/bee-trail.webp" />
+              </span>
+              <span class="wb-grow story-heading-icon">
+                <img alt="" aria-hidden="true" draggable="false" src="assets/images/lovestory.webp" />
+              </span>
+              <h2 class="wb-write section-main-title">Kisah Kami</h2>
+              <span class="wb-wave wave-separator">
+                <img alt="" aria-hidden="true" draggable="false" src="assets/images/wave.webp" />
+              </span>
+            </div>
+
+            <div data-reveal="true" class="text-center">
+              <p class="section-intro-text">Seperti lebah, dari bunga ke bunga</p>
+            </div>
+
+            <div class="story-timeline-container">
+              <!-- Dotted Curved Line -->
+              <div aria-hidden="true" class="story-line-overlay">
+                <svg width="100%" height="100%" viewBox="0 0 132 956" preserveAspectRatio="none" class="overflow-visible">
+                  <path d="M 27 33 C 27 217.5, 307 258.5, 307 443 C 307 627.5, 27 668.5, 27 853 C 27 1048.3, 307 1091.7, 307 1287" class="story-svg-path"></path>
+                </svg>
+              </div>
+
+              <!-- Story Node 1 -->
+              <div class="story-node-wrap">
+                <div data-story-row="true" data-reveal="left" class="wb-note story-row-ltr">
+                  <span data-story-dot="true" class="wb-dot story-dot-flower">
+                    <img alt="" aria-hidden="true" draggable="false" class="story-flower-icon" src="assets/images/flower.webp" />
+                  </span>
+                  <div class="story-card-box story-card-pink rot-1-2 text-left">
+                    <div class="story-photo-frame">
+                      <img alt="" class="story-photo-img" src="assets/images/couple-1.webp" />
+                    </div>
+                    <div class="story-text-pad">
+                      <p class="story-period-tag">Maret 2021</p>
+                      <h3 class="story-headline">Pertama Bertemu</h3>
+                      <p class="story-description">
+                        Bertemu di kelas seminar kampus, diawali dari diskusi kecil yang perlahan menumbuhkan rasa nyaman satu sama lain.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Story Node 2 -->
+              <div class="story-node-wrap mt-34">
+                <div data-story-row="true" data-reveal="right" class="wb-note story-row-rtl">
+                  <span data-story-dot="true" class="wb-dot story-dot-daisy">
+                    <img alt="" aria-hidden="true" draggable="false" class="story-flower-icon" src="assets/images/daisy.webp" />
+                  </span>
+                  <div class="story-card-box story-card-blue rot-neg-1-2 text-right">
+                    <div class="story-photo-frame">
+                      <img alt="" class="story-photo-img" src="assets/images/couple-2.webp" />
+                    </div>
+                    <div class="story-text-pad">
+                      <p class="story-period-tag">Oktober 2023</p>
+                      <h3 class="story-headline">Menjadi Terbiasa</h3>
+                      <p class="story-description">
+                        Setiap akhir pekan berubah menjadi momen berbagi cerita, saling menyemangati mengejar impian bersama.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Story Node 3 -->
+              <div class="story-node-wrap mt-34">
+                <div data-story-row="true" data-reveal="left" class="wb-note story-row-ltr">
+                  <span data-story-dot="true" class="wb-dot story-dot-flower">
+                    <img alt="" aria-hidden="true" draggable="false" class="story-flower-icon" src="assets/images/flower.webp" />
+                  </span>
+                  <div class="story-card-box story-card-yellow rot-1-2 text-left">
+                    <div class="story-photo-frame">
+                      <img alt="" class="story-photo-img" src="assets/images/couple-3.webp" />
+                    </div>
+                    <div class="story-text-pad">
+                      <p class="story-period-tag">November 2026</p>
+                      <h3 class="story-headline">Lamaran Khidmat</h3>
+                      <p class="story-description">
+                        Dengan restu penuh cinta kedua orang tua, kami melangkah mantap menuju ikatan suci pernikahan.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 10: FAMILY -->
+        <section data-band="family" class="inv-section bg-pink text-center">
+          <span data-scene="true" aria-hidden="true" class="band-scene">
+            <span data-orn="piece" class="orn-fam-daisy"><span class="rot-fam-daisy"><img alt="" draggable="false" class="anim-bob-daisy" src="assets/images/daisy.webp"></span></span>
+            <span data-orn="sway" class="orn-fam-branch"><span class="rot-fam-branch"><img alt="" draggable="false" class="anim-sway-branch" src="assets/images/branch.webp"></span></span>
+            <span data-orn="piece" class="orn-fam-confetti"><span class="rot-fam-confetti"><img alt="" draggable="false" class="anim-drift-confetti" src="assets/images/confetti.webp"></span></span>
+            <span data-orn="hover" class="orn-fam-bee"><span><img alt="" draggable="false" class="anim-hover-bee" src="assets/images/bee.webp"></span></span>
+            <span data-orn="sway" class="orn-fam-daisy-mid"><span class="rot-fam-daisy-mid"><img alt="" draggable="false" class="anim-sway-daisy" src="assets/images/daisy.webp"></span></span>
+            <span data-orn="piece" class="orn-fam-sparkle"><span><img alt="" draggable="false" class="anim-twinkle-sparkle" src="assets/images/sparkle.webp"></span></span>
+            <span class="scene-gradient-pink"></span>
+          </span>
+
+          <span aria-hidden="true" data-seam="true" class="band-seam-lace lace-pos-37"></span>
+
+          <div class="band-content">
+            <div data-reveal="true" class="wb-head pt-62">
+              <span aria-hidden="true" class="wb-beeway bee-trail-left-flip">
+                <img alt="" draggable="false" src="assets/images/bee-trail.webp" />
+              </span>
+              <h2 class="wb-write section-main-title">Keluarga Kami</h2>
+              <span class="wb-wave wave-separator">
+                <img alt="" aria-hidden="true" draggable="false" src="assets/images/wave.webp" />
+              </span>
+            </div>
+
+            <div data-reveal="true" class="wb-card family-card-box">
+              <span aria-hidden="true" class="wb-tape tape-lilac-lg tape-rot-2"></span>
+              <div>
+                <p class="family-role-tag">Orang Tua Mempelai Wanita</p>
+                <p class="family-names-bold">Bapak Hartono &amp; Ibu Sri Rahayu</p>
+              </div>
+              <div>
+                <span aria-hidden="true" class="family-dot-divider dot-blue"></span>
+                <p class="family-role-tag">Orang Tua Mempelai Pria</p>
+                <p class="family-names-bold">Bapak Bambang Wijaya &amp; Ibu Nurjanah</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 11: GIFT -->
+        <section id="gift" data-band="gift" class="inv-section bg-cream text-center">
+          <span data-scene="true" aria-hidden="true" class="band-scene">
+            <span data-orn="piece" class="orn-gf-hearts"><span class="rot-gf-hearts"><img alt="" draggable="false" class="anim-bob-hearts" src="assets/images/hearts.webp"></span></span>
+            <span data-orn="sway" class="orn-gf-ribbon"><span class="rot-gf-ribbon"><img alt="" draggable="false" class="anim-sway-ribbon" src="assets/images/ribbon.webp"></span></span>
+            <span data-orn="piece" class="orn-gf-confetti"><span class="rot-gf-confetti"><img alt="" draggable="false" class="anim-drift-confetti" src="assets/images/confetti.webp"></span></span>
+            <span data-orn="sway" class="orn-gf-flower"><span class="rot-gf-flower"><img alt="" draggable="false" class="anim-sway-flower" src="assets/images/flower.webp"></span></span>
+            <span data-orn="piece" class="orn-gf-sparkle"><span><img alt="" draggable="false" class="anim-twinkle-sparkle" src="assets/images/sparkle.webp"></span></span>
+            <span data-orn="hover" class="orn-gf-bee"><span class="flip-gf-bee"><img alt="" draggable="false" class="anim-hover-bee" src="assets/images/bee.webp"></span></span>
+            <span class="scene-gradient-cream"></span>
+          </span>
+
+          <span aria-hidden="true" data-seam="true" class="band-seam-lace lace-pos-0"></span>
+
+          <div class="band-content">
+            <div data-reveal="true" class="wb-head">
+              <span aria-hidden="true" class="wb-beeway bee-trail-right">
+                <img alt="" draggable="false" src="assets/images/bee-trail.webp" />
+              </span>
+              <span class="wb-grow gift-heading-icon">
+                <img alt="" aria-hidden="true" draggable="false" src="assets/images/gift.webp" />
+              </span>
+              <h2 class="wb-write section-main-title">Tanda Kasih</h2>
+              <span class="wb-wave wave-separator">
+                <img alt="" aria-hidden="true" draggable="false" src="assets/images/wave.webp" />
+              </span>
+            </div>
+
+            <div data-reveal="true" class="text-center">
+              <p class="section-intro-text">
+                Doa dan kehadiran Bapak/Ibu sudah lebih dari cukup bagi kami. Bila berkenan memberi tanda kasih, kami sediakan pilihan berikut.
+              </p>
+            </div>
+
+            <div class="gift-cards-column">
+              <!-- Rekening 1: BCA -->
+              <div data-reveal="left" class="wb-card rot-neg-1">
+                <div class="gift-card-inner">
+                  <span aria-hidden="true" class="wb-peel gift-box-right-peel">
+                    <img alt="" draggable="false" src="assets/images/giftbox.webp" />
+                  </span>
+                  <p class="bank-name-tag">BCA</p>
+                  <p id="acc-bca" class="bank-acc-number">1234567890</p>
+                  <p class="bank-holder-text">Putri Lestari</p>
+                  <div class="mt-14">
+                    <button type="button" class="btn-copy btn-outline-pill" onclick="copyAccount('acc-bca', this)">
+                      Salin Nomor
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Rekening 2: Mandiri -->
+              <div data-reveal="right" class="wb-card rot-1">
+                <div class="gift-card-inner">
+                  <span aria-hidden="true" class="wb-peel gift-box-left-peel">
+                    <img alt="" draggable="false" src="assets/images/giftbox.webp" />
+                  </span>
+                  <p class="bank-name-tag">Mandiri</p>
+                  <p id="acc-mandiri" class="bank-acc-number">0987654321000</p>
+                  <p class="bank-holder-text">Akbar Pratama</p>
+                  <div class="mt-14">
+                    <button type="button" class="btn-copy btn-outline-pill" onclick="copyAccount('acc-mandiri', this)">
+                      Salin Nomor
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kirim Hadiah Card -->
+            <div data-reveal="true" class="wb-card gift-address-box">
+              <p class="gift-address-tag">Kirim Hadiah</p>
+              <p id="gift-address" class="gift-address-text">
+                Jl. Anggrek Cendrawasih No. 45, Kebayoran Baru, Jakarta Selatan 12240
+              </p>
+              <button type="button" onclick="copyAccount('gift-address', this)" class="btn-copy-address-pill">
+                Salin Alamat
+              </button>
+            </div>
+
+            <div data-reveal="true" class="mt-20">
+              <p class="gift-confirm-note">
+                Mohon konfirmasi setelah mengirim agar kami dapat mengucapkan terima kasih.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 12: RSVP & WISHES -->
+        <section id="wishes" data-band="rsvp" class="inv-section bg-blue">
+          <span data-scene="true" aria-hidden="true" class="band-scene">
+            <span data-orn="piece" class="orn-rs-sparkle"><span class="rot-rs-sparkle"><img alt="" draggable="false" class="anim-bob-sparkle" src="assets/images/sparkle.webp"></span></span>
+            <span data-orn="sway" class="orn-rs-branch"><span class="rot-rs-branch"><img alt="" draggable="false" class="anim-sway-branch" src="assets/images/branch.webp"></span></span>
+            <span data-orn="piece" class="orn-rs-confetti"><span class="rot-rs-confetti"><img alt="" draggable="false" class="anim-drift-confetti" src="assets/images/confetti.webp"></span></span>
+            <span data-orn="sway" class="orn-rs-daisy"><span class="rot-rs-daisy"><img alt="" draggable="false" class="anim-sway-daisy" src="assets/images/daisy.webp"></span></span>
+            <span data-orn="hover" class="orn-rs-bee"><span><img alt="" draggable="false" class="anim-hover-bee" src="assets/images/bee.webp"></span></span>
+            <span data-orn="sway" class="orn-rs-flower"><span class="rot-rs-flower"><img alt="" draggable="false" class="anim-sway-flower" src="assets/images/flower.webp"></span></span>
+            <span class="scene-gradient-blue"></span>
+          </span>
+
+          <span aria-hidden="true" data-seam="true" class="band-seam-lace lace-pos-37"></span>
+
+          <div class="band-content">
+            <div class="text-center">
+              <div data-reveal="true" class="wb-head">
+                <span aria-hidden="true" class="wb-beeway bee-trail-right">
+                  <img alt="" draggable="false" src="assets/images/bee-trail.webp" />
+                </span>
+                <span class="wb-grow rsvp-heading-icon">
+                  <img alt="" aria-hidden="true" draggable="false" src="assets/images/rsvp.webp" />
+                </span>
+                <h2 class="wb-write section-main-title">RSVP &amp; Ucapan</h2>
+                <span class="wb-wave wave-separator">
+                  <img alt="" aria-hidden="true" draggable="false" src="assets/images/wave.webp" />
+                </span>
+              </div>
+              <div data-reveal="true" class="text-center">
+                <p class="section-intro-text">
+                  Tinggalkan pesan untuk kami. Setiap doa yang Bapak/Ibu tuliskan akan kami baca.
+                </p>
+              </div>
+            </div>
+
+            <!-- RSVP Form Box -->
+            <form id="rsvp-form" data-reveal="true" class="wb-form rsvp-form-box">
+              <span aria-hidden="true" class="wb-tape tape-pink-lg tape-rot-neg-3"></span>
+              <span aria-hidden="true" class="wb-peel rsvp-envelope-peel">
+                <img alt="" draggable="false" src="assets/images/envelope.webp" />
+              </span>
+
+              <input id="rsvp-name" placeholder="Nama" required class="form-input-pill" />
+
+              <!-- Attendance Choice Buttons -->
+              <div class="attendance-btn-row">
+                <button type="button" id="btn-hadir" class="btn-attending active" onclick="setAttendance('Hadir')">
+                  Hadir
+                </button>
+                <button type="button" id="btn-tidakhadir" class="btn-attending" onclick="setAttendance('Tidak Hadir')">
+                  Tidak Hadir
+                </button>
+              </div>
+
+              <!-- Guest Counter Stepper -->
+              <div data-rsvp="guests" class="guest-counter-pill">
+                <span class="guest-counter-label">Jumlah tamu</span>
+                <button type="button" onclick="changeGuestCount(-1)" aria-label="Kurangi" class="counter-stepper-btn">
+                  <span aria-hidden="true" class="stepper-square-icon">−</span>
+                </button>
+                <span id="guest-count-val" aria-live="polite" class="guest-count-display">1</span>
+                <button type="button" onclick="changeGuestCount(1)" aria-label="Tambah" class="counter-stepper-btn">
+                  <span aria-hidden="true" class="stepper-square-icon">+</span>
+                </button>
+              </div>
+
+              <textarea id="rsvp-message" placeholder="Ucapan &amp; doa" rows="3" required class="form-textarea-pill"></textarea>
+
+              <button type="submit" id="btn-submit-rsvp" class="btn-primary-pill w-full">
+                <span>Kirim</span>
+              </button>
+            </form>
+
+            <div data-reveal="true" class="wb-object wishes-heading-wrap">
+              <img alt="" aria-hidden="true" draggable="false" src="assets/images/wishes.webp" />
+            </div>
+
+            <!-- Wishes Cards Stream -->
+            <div id="wishes-stream" data-reveal="true" class="wishes-stream-container">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 13: CLOSING -->
+        <section data-band="closing" class="inv-section bg-pink text-center pb-60">
+          <span data-scene="true" aria-hidden="true" class="band-scene">
+            <span data-orn="piece" class="orn-cl-daisy"><span class="rot-cl-daisy"><img alt="" draggable="false" class="anim-bob-daisy" src="assets/images/daisy.webp"></span></span>
+            <span data-orn="sway" class="orn-cl-ribbon"><span class="rot-cl-ribbon"><img alt="" draggable="false" class="anim-sway-ribbon" src="assets/images/ribbon.webp"></span></span>
+            <span data-orn="piece" class="orn-cl-confetti-1"><span class="rot-cl-confetti-1"><img alt="" draggable="false" class="anim-drift-confetti" src="assets/images/confetti.webp"></span></span>
+            <span data-orn="piece" class="orn-cl-confetti-2"><span class="rot-cl-confetti-2"><img alt="" draggable="false" class="anim-drift-confetti" src="assets/images/confetti.webp"></span></span>
+            <span data-orn="piece" class="orn-cl-sparkle"><span><img alt="" draggable="false" class="anim-twinkle-sparkle" src="assets/images/sparkle.webp"></span></span>
+            <span data-orn="hover" class="orn-cl-bee"><span class="flip-cl-bee"><img alt="" draggable="false" class="anim-hover-bee" src="assets/images/bee.webp"></span></span>
+            <span data-orn="sway" class="orn-cl-meadow"><span><img alt="" draggable="false" class="anim-grass-meadow" src="assets/images/meadow.webp"></span></span>
+            <span class="scene-gradient-pink"></span>
+          </span>
+
+          <span aria-hidden="true" data-seam="true" class="band-seam-lace lace-pos-37"></span>
+
+          <div class="band-content">
+            <!-- Final Polaroid Photo with Bow -->
+            <div data-reveal="true" class="wb-print closing-polaroid-wrap">
+              <div class="polaroid-wrapper-252">
+                <div class="polaroid-card-pink rot-3">
+                  <div class="polaroid-frame-4-5">
+                    <img alt="" class="polaroid-img-center" src="assets/images/couple-3.webp" />
+                  </div>
+                  <span class="wb-peel bow-center-peel">
+                    <span class="wb-bow">
+                      <img alt="" draggable="false" class="drop-shadow-bow" src="assets/images/bow.webp" />
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div data-reveal="true" class="wb-head">
+              <p class="wb-write closing-thanks-script">Terima Kasih</p>
+            </div>
+
+            <div data-reveal="true">
+              <p class="section-intro-text">
+                Atas kehadiran dan doa restu Bapak/Ibu/Saudara/i, kami sekeluarga mengucapkan terima kasih yang sebesar-besarnya.
+              </p>
+            </div>
+
+            <h2 data-reveal="true" class="closing-heading">
+              <span class="block">
+                <span class="closing-name-bride"><span data-name="bride">Putri</span></span>
+                <span aria-hidden="true" class="closing-amp">&amp;</span>
+                <span class="closing-name-groom"><span data-name="groom">Akbar</span></span>
+              </span>
+            </h2>
+
+            <div data-reveal="true">
+              <p class="closing-hashtag">#PutriAkbarBersemi</p>
+              <p class="closing-date">24 April 2027</p>
+            </div>
+
+            <div data-reveal="true" class="wb-object closing-thanks-badge">
+              <span class="wb-grow thanks-grow-span">
+                <img alt="" aria-hidden="true" draggable="false" class="drop-shadow-thanks" src="assets/images/thanks.webp" />
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer Credit -->
+        <footer class="inv-credit">
+          <p>Created with &#10084;&#65039; for Putri &amp; Akbar 2027</p>
+        </footer>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== LIGHTBOX MODAL ==================== -->
+  <div id="lightbox-modal" class="lightbox-modal hidden" aria-hidden="true">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <button id="lightbox-close" class="lightbox-close-btn">&times;</button>
+      <img id="lightbox-img" src="" alt="Enlarged photo" />
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast-notification hidden"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
