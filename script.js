@@ -202,8 +202,8 @@ function initInvitation() {
     });
   }
 
-  // 3. Countdown Timer (24 April 2027 08:00 WIB)
-  const weddingDate = new Date("2027-04-24T08:00:00+07:00").getTime();
+  // 3. Countdown Timer (13 Desember 2026 09:00 WIB)
+  const weddingDate = new Date("2026-12-13T09:00:00+07:00").getTime();
   const cdDays = document.getElementById("cd-days");
   const cdHours = document.getElementById("cd-hours");
   const cdMins = document.getElementById("cd-mins");
@@ -442,7 +442,7 @@ window.copyAccount = function(elementId, buttonEl) {
   const target = document.getElementById(elementId);
   if (!target) return;
 
-  const textToCopy = target.textContent.trim();
+  const textToCopy = target.getAttribute("data-copy") || target.textContent.trim();
 
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(textToCopy).then(() => {
