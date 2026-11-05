@@ -388,7 +388,7 @@ button, input, select, textarea {
   height: 100%;
   max-width: none;
   object-fit: cover;
-  object-position: 37.6% 0%;
+  object-position: center 22%;
   transform: scale(1);
 }
 
@@ -1012,7 +1012,7 @@ button, input, select, textarea {
   height: 100%;
   max-width: none;
   object-fit: cover;
-  object-position: 36% 0%;
+  object-position: center 18%;
 }
 
 .polaroid-img-top-35 {
@@ -1021,7 +1021,7 @@ button, input, select, textarea {
   height: 100%;
   max-width: none;
   object-fit: cover;
-  object-position: 35.5% 0%;
+  object-position: center 15%;
 }
 
 .polaroid-hearts-sticker {
